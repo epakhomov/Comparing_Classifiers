@@ -8,30 +8,36 @@ The accompanying Jupyter notebook can be [found here]().
 
 ## The objective and the data
 
-The objective of this assignment is to compare the performance of the classifiers (k-nearest neighbors, logistic regression, decision trees, and support vector machines). The data for this assignment could be found [here](https://archive.ics.uci.edu/dataset/222/bank+marketing).
+The objective of this assignment is to compare the performance of the classifiers (dummy classifier, k-nearest neighbors, logistic regression, decision trees, and support vector machines). The data for this assignment could be found [here](https://archive.ics.uci.edu/dataset/222/bank+marketing).
+
+
+## The business objective 
+
+The business objective is to find a machine learning model that would predict whether a customer would open a long term deposit or not. The model will help improve the efficiency of marketing campaings by adjusting the campaign's parameters according to the model
 
 ## The methods
 
-The methodology for this assignment was based on CRISP_DM framework and included standard ML stages like Business and Data understanding, Data preparation, etc. Please note that only linear regression models were in the scope of the assignment. In addition, while the [Jupyter notebook](https://github.com/epakhomov/What-drives-the-price-of-a-car/blob/main/scr/prompt_II.ipynb) tries to follow the CRISP_DM framework, this README does not. 
+The methodology for this assignment was based on CRISP_DM framework and included standard ML stages like Business and Data understanding, Data preparation, etc. 
+
+## Models evaluation metrics
+
+The dataset is highly imbalanced, so the standard accuracy score is not a good metric for this case. Given the business problem, the **precision score** seems to be more appropriate. The precision is intuitively the ability of the classifier not to label as positive a sample that is negative. In this context, it means the customer does not open long term deposit, but the model predicts the opposite. This type of error would impact revenue forecast negatively and everybody hates when it happens.
+
 
 ## Data quality and data preparation highlights
 
-The data missed significant portion of values in few categories (Fig.3.), it had many duplicates, outliers, etc. It was also establsihed that nuances of data preparation and cleaning had significant effect on the outcoume. Quantifying this effect is a subject of feature research.
+The data had no missing values. The categorical variables were target encoded. Standard scaled was applied.
 
-<img src="/images/3.png" alt="Fig.3" class="center" style="width:600px;height:auto;">
+## Models performance with the default parameters.
 
-Standard Pandas deduplication and imputation techniques were used. Non-numeric variables were mean encoded. Outliers were removed empirically. 
+The accuracy scores and train times for each model can be found in table 1.
 
-## Regression models and performance
+|  Model  | Train score | Test score| Train times, s| 
+|---------|-------------|-----------|---------------|
+| Dummy   | 0.0         | 0.0       | 0.004         |
+|---------|-------------|-----------|---------------|
 
-The following models were used:
-- Linear regression
-- Ridge regression with default parameters
-- GridsearchCV was used to find optimal alpha for ridge regression
-- Lasso regression with various parameters
-- RidgeCV with target log transformation
 
-Suprisingly, absolutely all models scored roughly the same for both training and test scores with R2 ~ 0.45.
 
 ## Feature importance
 
