@@ -35,7 +35,10 @@ The accuracy scores and train times for each model can be found in table 1.
 |  Model  | Train score | Test score| Train times, s| 
 |---------|-------------|-----------|---------------|
 | Dummy   | 0.0         | 0.0       | 0.004         |
-| Logistic| 0.664	    | 0.667     | 0.0990        |
+| Logistic| 0.664	    | 0.667     | 0.0990        |       
+| KNN     | 0.745       | 0.575     | 0.0151        |       
+| D. Tree | 1.0         | 0.49      | 0.1478        |  
+| SVM     | 0.749       | 0.664     | 5.0280        |
 |---------|-------------|-----------|---------------|
 
 
