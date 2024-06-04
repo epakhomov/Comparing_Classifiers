@@ -30,7 +30,7 @@ The data had no missing values. The categorical variables were target encoded. S
 
 ## Models performance with the default parameters.
 
-The accuracy scores and train times for each model can be found in table 1.
+The accuracy scores and train times for each model can be found in Table 1.
 
 |  Model  | Train score | Test score| Train times, s| 
 |---------|-------------|-----------|---------------|
@@ -41,13 +41,17 @@ The accuracy scores and train times for each model can be found in table 1.
 | SVM     | 0.749       | 0.664     | 5.0280        |
 
 
-## Feature importance
+## Hyperparameters tuning
 
-In order to assess feature importance, coefficients for the linear model were examined (Fig.7.) as well as the SHAP values (Fig.8.).
+GridSearchCV was applied to each model to find the best hyperparameters. The comparison of precision scores for the **test data** for models with default hyperparameters and best hyperparameters can be found in Table 2.
 
-<img src="/images/7.png" alt="Fig.7" class="center" style="width:600px;height:auto;">
+|  Model  | Default     | Best      | 
+|---------|-------------|-----------|
+| Logistic| 0.667       | 0.665     |
+| KNN     | 0.575	    | 0.602     | 
+| D. Tree | 0.49        | 0.593     | 
+| SVM     | 0.664       | 0.691     |
 
-<img src="/images/8.png" alt="Fig.8" class="center" style="width:600px;height:auto;">
 
 ## Results and discussion
 
