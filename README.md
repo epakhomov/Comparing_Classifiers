@@ -30,7 +30,7 @@ The data had no missing values. The categorical variables were target encoded. S
 
 ## Models performance with the default parameters.
 
-The accuracy scores and train times for each model can be found in Table 1.
+The precision scores and train times for each model can be found in Table 1.
 
 |  Model  | Train score | Test score| Train times, s| 
 |---------|-------------|-----------|---------------|
@@ -40,6 +40,7 @@ The accuracy scores and train times for each model can be found in Table 1.
 | D. Tree | 1.0         | 0.49      | 0.1478        |  
 | SVM     | 0.749       | 0.664     | 5.0280        |
 
+Table 1. The precision score for models with default hyperparameters.
 
 ## Hyperparameters tuning
 
@@ -51,6 +52,8 @@ GridSearchCV was applied to each model to find the best hyperparameters. The com
 | KNN     | 0.575	    | 0.602     | 
 | D. Tree | 0.49        | 0.593     | 
 | SVM     | 0.664       | 0.691     |
+
+Table 2. Precision scores for test data for default and tuned models.
 
 Best parameters for the SVM were: C=0.1, gamma='scale', kernel='poly'
 
@@ -89,6 +92,7 @@ With Sequential Feature Selector, we could also rank features, i.e., we were abl
 | cons.price  | 3    |
 | housing     | 1    |
 
+Table 3. Ranking of the features based on the output from Sequential Feature Selector.
 
 ## Next steps
 
