@@ -13,7 +13,7 @@ The objective of this assignment is to compare the performance of the classifier
 
 ## The business objective 
 
-The business objective is to find a machine learning model that would predict whether a customer would open a long term deposit or not. The model will help improve the efficiency of marketing campaigns by adjusting the campaign's parameters according to the model
+The business objective is to find a machine learning model that would predict whether a customer would open a long term deposit or not. The model will help improve the efficiency of marketing campaigns by adjusting the campaign's parameters according to the model.
 
 ## The methods
 
