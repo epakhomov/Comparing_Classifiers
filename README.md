@@ -101,4 +101,4 @@ As we can see the most impactful features are "duration", "nr.employed", "poutco
 There are additional strategies that we can use to improve the model:
 - Using different model like neural networks as SVM is not a good fit for a large dataset like this.
 - Different encoding of categorical variables.
-- Dropping the duration variable and repeat the modeling process.
+- Dropping the "duration" variable and repeat the modeling process.
