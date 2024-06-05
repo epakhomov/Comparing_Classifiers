@@ -4,7 +4,7 @@
 
 This README file provides a summary of findings for Practical Application Assignment III: Comparing_Classifiers.
 
-The accompanying Jupyter notebook can be [found here](). 
+The accompanying Jupyter notebook can be [found here](https://github.com/epakhomov/Comparing_Classifiers/blob/main/scr/prompt_III.ipynb). 
 
 ## The objective and the data
 
