@@ -70,7 +70,7 @@ Precision is a metric used in machine learning to measure how often a model's po
 
 As we can see from Table 1, no model with default parameters scored above 0.7 on the test data, although logistic regression and SVM models got really close.
 
-After finding best parameters with GridSearchCV, the scores improved for all models (except for logistic regression), however, the improvement was insignificant and no model score above 0.7. However, the SVM scored better than others, therefore it was decided to improve the SVM model performance by removing features with Sequential Feature Selector. The results can be seen on Fig.2.
+After finding best parameters with GridSearchCV, the scores improved for all models (except for logistic regression), however, the improvement was insignificant and no model scored above 0.7. However, the SVM scored better than others, therefore it was decided to improve the SVM model performance by removing features with Sequential Feature Selector. The results can be seen on Fig.2.
 
 <img src="/images/2.png" alt="Fig.2" class="center" style="width:600px;height:auto;">
 
