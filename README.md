@@ -8,7 +8,7 @@ The accompanying Jupyter notebook can be [found here]().
 
 ## The objective and the data
 
-The objective of this assignment is to compare the performance of the classifiers (dummy classifier, k-nearest neighbors, logistic regression, decision trees, and support vector machines). The data for this assignment could be found [here](https://archive.ics.uci.edu/dataset/222/bank+marketing).
+The objective of this assignment is to compare the performance of the classifiers (dummy classifier, k-nearest neighbors, logistic regression, decision trees, and support vector machines). The dataset for this assignment could be found [here](https://archive.ics.uci.edu/dataset/222/bank+marketing).
 
 
 ## The business objective 
@@ -52,14 +52,18 @@ GridSearchCV was applied to each model to find the best hyperparameters. The com
 | D. Tree | 0.49        | 0.593     | 
 | SVM     | 0.664       | 0.691     |
 
+Best parameters for the SVM were: C=0.1, gamma='scale', kernel='poly'
+
+## Feature selection 
+
+To further improve the performance, Sequential Feature Selector was used to remove (backward selection) features to form a feature subset for SVM with the best parameters found earlier with GridSearchCV.
+
 
 ## Results and discussion
 
-We can see that there is only one independent variable, "odometer", that has a strong negative relationship with the price target. Which makes sense, the more miles car had driven, the less valuable it becomes.
+### Precision score interpretation
 
-In terms of effect sizes of the variables, we can see that aside from the odometer variable, there are six more variable that display sizeable effect. 
-
-We get similar results from Shap. As we can see from the Shap plot, the higher odometor values negatively impact the price. While lower values of year also negatively impact the price which also makes sense.
+Precision is a metric used in machine learning to measure how often a model's positive predictions are correct. The higher the score, the better model performed. According to various sources, precision needs to be at minimum 70-80% (0.7-0.8) for a model to be useful. 
 
 ## Next steps
 
