@@ -94,9 +94,11 @@ With Sequential Feature Selector, we could also rank features, i.e., we were abl
 
 Table 3. Ranking of the features based on the output from Sequential Feature Selector.
 
+As we can see the most impactful features are "duration", "nr.employed", "poutcome" and campaign. However, as we know from the data, the duration variable should be discarded if the intention is to have a realistic predictive model. With that said, one should consider number of contacts in the campaign, outcome of the previous campaign and number of employers as an important predictors.  
+
 ## Next steps
 
-We can try improving the model performance by the following:
-- Improving data preparation and cleaning stages
-- Acquiring more data from the original dataset
-- Applying non-linear models
+There are additional strategies that we can use to improve the model:
+- Using different model like neural networks as SVM is not a good fit for a large dataset like this.
+- Different encoding of categorical variables.
+- Dropping the duration variable and repeat the modeling process.
