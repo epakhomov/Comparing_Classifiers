@@ -65,25 +65,28 @@ To further improve the performance, Sequential Feature Selector was used to remo
 
 Precision is a metric used in machine learning to measure how often a model's positive predictions are correct. The higher the score, the better model performed. According to various sources, precision needs to be at minimum 70-80% (0.7-0.8) for a model to be useful. 
 
+As we can see from Table 1, no model with default parameters scored above 0.7 on the test data, although logistic regression and SVM models got really close.
+
+After finding best parameters with GridSearchCV, the scores improved for all models (except for logistic regression), however, the improvement was insignificant and no model score above 0.7. However, the SVM scored better than others, therefore it was decided to improve the SVM model performance by removing features with Sequential Feature Selector. The results can be seen on Fig.2.
+
+<img src="/images/2.png" alt="Fig.2" class="center" style="width:600px;height:auto;">
+
+As we can see from the plot, the model trained with 10 features yielded the highest precision score on the test data - **0.725**. 
+
+With Sequential Feature Selector, we could also rank features, i.e., we were able to count instances of features selected in all iteration that were performed. The results can be found in Table 3.
+
+| Feature | Rank        | 
+|---------|-------------|
+| Logistic| 0.667       |
+| KNN     | 0.575	    |
+| D. Tree | 0.49        |
+| SVM     | 0.664       |
+
+
+
 ## Next steps
 
 We can try improving the model performance by the following:
 - Improving data preparation and cleaning stages
 - Acquiring more data from the original dataset
 - Applying non-linear models
-
-## Non-technical recommendation to a dealership
-
-Dear sellers,
-
-I'd like to discuss what factors or properties of a used car make it less or more expensive from a buyer's perspective and what you can do it about it. As we all know, different buyers value different things in a car. For example, someone who likes music will be looking at an acoustic system and properties of a car, someone who doesn't like music, wouldn't really care about it that much. Therefore, we will be looking at properties of a car that are important to the vast majority of the buyers. This information should increase sales of the inventory.
-
-According to the analysis, the two most important properties are current mileage and year when the car was made. The bigger value of the odometer is, the lower price a customer is willing to pay for a car. The opposite is also true, customers are willing to pay more money for the cars with lower mileage. 
-
-Regarding the year of a car, the older car is, less valuable the car becomes from a buyer perspective. The condition of a car doesn't seem to be a strong factor. That is most likely due to the fact (unless the body is visibly damaged), that a true condition of internal important parts of the car(engine, brakes, etc.) is unknown most of the time.
-
-Based on this analysis, we recommend the following: 
-
-1) Don't let the original sellers to leverage any other properties of a car to get a better deal with you. Remember, the most important properties are current mileage and the year when the car was made. As an example, If a car was manufactured many years ago and has a lot of miles on it, it doesn't really matter if it has an unusual color. 
-
-2) In order to maximize the revenue, our recommendation is to focus on buying (from the original owners) cars manufactured in recent years and that have low odometer values. The ROI from buying newer cars from owners should be higher than ROI from buying any cars.
