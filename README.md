@@ -75,13 +75,19 @@ As we can see from the plot, the model trained with 10 features yielded the high
 
 With Sequential Feature Selector, we could also rank features, i.e., we were able to count instances of features selected in all iteration that were performed. The results can be found in Table 3.
 
-| Feature | Rank        | 
-|---------|-------------|
-| Logistic| 0.667       |
-| KNN     | 0.575	    |
-| D. Tree | 0.49        |
-| SVM     | 0.664       |
-
+| Feature     | Rank | 
+|-------------|------|
+| duration    | 8    |
+| nr.employed | 8    |
+| poutcome    | 7    |
+| campaign    | 6    |
+| day_of_week | 5    |
+| job         | 4    |
+| education   | 4    |
+| pdays       | 4    |
+| loan        | 3    |
+| cons.price  | 3    |
+| housing     | 1    |
 
 
 ## Next steps
